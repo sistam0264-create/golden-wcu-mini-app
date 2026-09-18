@@ -1,93 +1,23 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0f172a">
-  <title>Golden WCU Freshman Tutorial</title>
-  <script src="https://telegram.org/js/telegram-web-app.js?63"></script>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1220"><title>Golden WCU Freshman Tutorial</title>
+<script src="https://telegram.org/js/telegram-web-app.js?63"></script>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="app">
-    <header class="hero">
-      <div class="brand">
-        <div class="logo">GW</div>
-        <div>
-          <p class="eyebrow">GOLDEN WCU</p>
-          <h1>Freshman Tutorial</h1>
-          <p class="muted">Learn Smart • Practice More • Prepare Early</p>
-        </div>
-      </div>
-      <div id="userBox" class="user-box">Telegram student</div>
-    </header>
-
-    <section class="welcome">
-      <div>
-        <span class="badge">🎓 Freshman Hub</span>
-        <h2>Your academic dashboard</h2>
-        <p>Access courses, quizzes, study materials and academic support from one place.</p>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-title">
-        <h2>Quick Access</h2>
-        <span>2026</span>
-      </div>
-
-      <div class="grid">
-        <button class="card" data-page="courses">
-          <span class="icon">📚</span><strong>Courses</strong><small>Browse freshman subjects</small>
-        </button>
-        <button class="card" data-page="materials">
-          <span class="icon">📄</span><strong>Materials</strong><small>Notes, PDFs & worksheets</small>
-        </button>
-        <button class="card" data-page="quizzes">
-          <span class="icon">📝</span><strong>Quizzes</strong><small>Practice your knowledge</small>
-        </button>
-        <button class="card" data-page="exams">
-          <span class="icon">🎯</span><strong>Past Exams</strong><small>Prepare before exams</small>
-        </button>
-        <button class="card" data-page="updates">
-          <span class="icon">📢</span><strong>Updates</strong><small>Academic announcements</small>
-        </button>
-        <button class="card" data-page="support">
-          <span class="icon">💬</span><strong>Support</strong><small>Contact Golden WCU</small>
-        </button>
-      </div>
-    </section>
-
-    <section class="courses">
-      <div class="section-title">
-        <h2>Freshman Courses</h2>
-        <span>1st Semester</span>
-      </div>
-      <div id="courseList" class="course-list"></div>
-    </section>
-
-    <section class="premium">
-      <div>
-        <span class="badge">⭐ PREMIUM</span>
-        <h2>Golden WCU Premium Tutorial</h2>
-        <p>Get structured study resources and practice materials for your freshman year.</p>
-      </div>
-      <button id="joinBtn" class="primary">Get Premium Access</button>
-    </section>
-
-    <footer>
-      <p>Golden WCU • Freshman Tutorial</p>
-      <p class="muted">Built for Wachemo University students</p>
-    </footer>
-  </main>
-
-  <div id="modal" class="modal hidden" aria-hidden="true">
-    <div class="modal-card">
-      <button id="closeModal" class="close" type="button" aria-label="Close">×</button>
-      <div id="modalContent"></div>
-    </div>
-  </div>
-
-  <script src="app.js"></script>
-</body>
-</html>
+<div class="app-shell">
+<header class="topbar">
+  <button class="icon-btn" id="homeBtn" aria-label="Home">⌂</button>
+  <div class="brand"><div class="logo">GW</div><div><div class="brand-mini">GOLDEN WCU</div><div class="brand-title">Freshman Tutorial</div></div></div>
+  <button class="icon-btn" id="menuBtn" aria-label="Menu">☰</button>
+</header>
+<main id="app"></main>
+<nav class="bottom-nav" id="bottomNav">
+ <button data-view="home">🏠<span>Home</span></button><button data-view="courses">📚<span>Courses</span></button><button data-view="physics">⚛️<span>Physics</span></button><button data-view="exams">🎯<span>Exams</span></button><button data-view="more">☰<span>More</span></button>
+</nav>
+<div class="drawer hidden" id="drawer"><div class="drawer-card"><button id="closeDrawer" class="close">×</button><h2>Golden WCU Menu</h2><button data-view="home">🏠 Home</button><button data-view="courses">📚 Freshman Courses</button><button data-view="physics">⚛️ General Physics Hub</button><button data-view="materials">📄 Materials</button><button data-view="quizzes">📝 Quiz Center</button><button data-view="exams">🎯 Past Exams</button><button data-view="updates">📢 Updates</button><button data-view="support">💬 Support</button></div></div>
+<div class="modal hidden" id="modal"><div class="modal-card"><button id="closeModal" class="close">×</button><div id="modalBody"></div></div></div>
+<script src="data.js"></script><script src="app.js"></script>
+</body></html>
